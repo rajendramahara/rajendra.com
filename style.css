@@ -1,0 +1,612 @@
+/*
+Font family 
+font-family: 'Dancing Script', cursive;  Logo
+font-family: 'Roboto Flex', sans-serif;  Page
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo-text{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logo-text h1{
+    font-family:'Dancing Script', cursive;
+}
+
+.logo-text h1:nth-child(1){
+    color: rgb(255, 0, 170);
+}
+
+.logo-text h1:nth-child(2){
+    color: rgb(174, 0, 255);
+}
+
+.logo-text h1:nth-child(3){
+    color: rgb(255, 0, 170);
+}
+
+.logo-text h1:nth-child(4){
+    color: rgb(0, 119, 255);
+}
+
+.logo-text h1:nth-child(5){
+    color: rgb(174, 0, 255);
+}
+
+/*----Animation----*/
+
+.logo-animation-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+}
+
+
+.loader {
+    width: 12px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    animation: loader 1s ease-in-out infinite;
+}
+
+@keyframes loader{
+    0%{
+        height: 4px;
+    }
+    50%{
+        height: 40px;
+    }
+    100%{
+        height: 4px;
+    }
+}
+
+.loader:nth-child(1){
+    background-color: rgb(255, 0, 170);
+    animation-delay: 1s;
+}
+
+.loader:nth-child(2){
+    background-color: rgb(174, 0, 255);
+    animation-delay: 0.8s;
+}
+
+.loader:nth-child(3){
+    background-color: rgb(255, 0, 170);
+    animation-delay:0.6s;
+}
+
+.loader:nth-child(4){
+    background-color: rgb(0, 119, 255);
+    animation-delay: 0.4s;
+}
+
+.loader:nth-child(5){
+    background-color: rgb(174, 0, 255);
+    animation-delay: 0.6s;
+}
+
+/*----Animation end----*/
+
+.page-header{
+    display: flex;
+    height: 20%;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
+}
+
+.header-menu {
+    flex: 1;
+}
+
+.header-menu ul{
+    display: flex;
+}
+
+.header-menu ul li{
+    list-style-type: none;
+    padding: 10px 40px;
+}
+
+.header-menu ul li a{
+    font-size: 22px;
+    background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(255, 0, 170));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.header-menu ul li a:before {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background-color: rgb(255, 0, 170);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: all 0.35s;
+}
+
+.header-menu ul li a:after {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background-color: rgb(174, 0, 255);
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition:  all 0.35s;
+}
+
+.header-menu ul li a:hover::before{
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.header-menu ul li a:hover::after{
+    width: 50%;
+    transform: translateX(-100%);
+}
+
+/*----Search----*/
+
+.search-area{
+    padding-top: 130px;
+    display: flex;
+    height: 800px;
+    background-color: rgb(36, 36, 36);
+}
+
+.search-input a{
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    color: rgb(230, 230, 230);
+    transition: all 0.5s;
+}
+
+.search-input a:hover{
+    color: rgb(255, 0, 170);
+    transform: translateX(10px);
+}
+
+.search-input {
+    flex: 1;
+    display: inline-grid;
+    place-content: center;
+}
+
+.src-btn {
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+
+.src-btn::placeholder{
+    color: rgb(230, 230, 230);
+}
+
+.music-images {
+    flex: 1;
+}
+
+.music-images h1{
+   position: absolute;
+   left: 77%;
+   top:30%;
+   z-index: 1000;
+   color: rgb(230, 230, 230);
+   font-family: 'Dancing Script', cursive;
+   font-weight: 600;
+   font-size: 40px;
+}
+
+.music-types a{
+    width: 300px;
+    height: 300px;
+    position: absolute;   
+    transition: all 0.5s;
+}
+
+.music-types a:hover{
+    transform: scale(110%);
+    z-index: 100;
+}
+
+.music-types a img{
+    width: 300px;
+    height:300px;
+    border-radius: 50%;
+    border: 1px solid rgb(36, 36, 36);
+    padding: 10px;
+    background: linear-gradient(to right, rgb(174, 0, 255), rgb(255, 0, 170));
+}
+
+.type-img:first-child{
+    top: 37%;
+    left: 50%;
+}
+
+.type-img:nth-child(2){
+    top: 37%;
+    left: 55%;
+}
+
+.type-img:nth-child(3){
+    top: 37%;
+    left: 60%;
+}
+
+.type-img:nth-child(4){
+    top: 37%;
+    left: 65%;
+}
+
+.type-img:nth-child(5){
+    top: 37%;
+    left: 70%;
+}
+
+.type-img:nth-child(6){
+    top: 37%;
+    left: 75%;
+}
+
+/*----Add song to list----*/
+
+.my-list {
+    display: flex;
+    height: 600px;
+    border-bottom: 1px solid black;
+}
+
+.selected-songs {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.selected-song{
+    list-style-type: none;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    display: flex;
+    width: 450px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.fa-circle-minus{
+    color: rgb(173, 0, 0);
+}
+
+.selected-songs h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.add-new-song {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.add-new-song form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-new-song p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.add-new-song form button{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+.add-new-song input{
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(0, 102, 0);
+}
+
+.add-new-song input::placeholder {
+    color: rgb(36, 36, 36);
+    letter-spacing: 3px;
+}
+
+.fa-plus{
+    color: rgb(9, 255, 0);
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(0, 102, 0);
+    background-color: rgb(0, 102, 0);
+    position: absolute;
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+}
+    
+::-webkit-scrollbar-track{
+    visibility: hidden;
+}
+    
+::-webkit-scrollbar-thumb{
+    background: rgb(36, 36, 36); 
+    visibility: visible;
+    height: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover{
+    background: #555; 
+    visibility: visible;
+}
+
+/*----Song List End----*/
+
+.slider-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid black;
+}
+
+.listening-slider {
+    height: 700px;
+    width: 490px;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.listening-song{
+    background-image: linear-gradient(to right, rgb(2, 2, 2), rgb(66, 66, 66));
+    padding: 45px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.singer{
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: lightgray;
+}
+
+.song{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.listening-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.fa-circle-play{
+    font-size: 52px;
+    color: green;
+}
+
+.song-time-track {
+    margin-top: 30px;
+    border-bottom: 2px solid rgb(138, 0, 0);
+    width: 80%;
+}
+
+.song-time{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-time p{
+    position: absolute;
+    left: 92%;
+    top: 63%;
+    color: white;
+}
+
+.song-time .fa-circle{
+    position: absolute;
+    left: 8%;
+    top: 73%;
+    color: rgb(138, 0, 0);
+}
+
+.listening-slider .listening-song img{
+    width: 300px;
+    height: 300px;
+    clip-path: inset(5% 18% 0 18%);
+}
+
+.arrow {
+    color: black;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0px 75px;
+    z-index: 3000;
+}
+
+/*----Sign Up & Modal----*/
+
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(48, 48, 48, 0.616);
+}
+
+.modal form{
+    min-width: 20%;
+    display: flex;
+    flex-flow: column;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(61, 1, 102);
+    position: relative;
+}
+
+.modal form input::placeholder{
+    color: rgb(68, 68, 68);
+    letter-spacing: 2px;
+}
+
+#form-btn{
+    padding: 15px 35px;
+    background-color: rgb(0, 119, 30);
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#form-btn:hover {
+    background-color: rgb(0, 0, 0);
+    border-top-left-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+.modal form input{
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom-right-radius: 15px;
+    border: 0.5px solid black;
+}
+
+#close-modal{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+}
+
+.sign-up-section{
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(36, 36, 36);
+}
+
+.sign-up-section h1{
+    font-size: 36px;
+    font-weight: 300;
+    color: rgb(209, 209, 209);
+    letter-spacing: 2px;
+}
+
+#open-modal{
+    height: 75px;
+    width: 800px;
+    background: linear-gradient(rgb(36, 36, 36), rgb(255, 0, 170));;
+    border: none;
+    margin-top: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#open-modal:hover p{
+    color: rgb(36, 36, 36);
+}
+
+#open-modal:hover{
+    transform: scale(95%);
+}
+
+#open-modal p{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 50px;
+    font-weight: 900;
+    transition: all 0.3s;
+}

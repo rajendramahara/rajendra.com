@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="logo-animation-side">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="logo-text">
+                <h1>m</h1>
+                <h1>u</h1>
+                <h1>s</h1>
+                <h1>i</h1>
+                <h1>c</h1>
+            </div>
+        </div>
+        <div class="header-menu">
+            <ul>
+                <li><a href="gsap.html">home</a></li>
+                <li><a href="#">search</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#my-list">mylist</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="search-area">
+        <div class="search-input">
+            <a href="#">jazz</a>
+            <a href="#">techno</a>
+            <a href="#">classic</a>
+            <a href="#">rock</a>
+            <input type="text" class="src-btn" placeholder="search your favourite types">
+            <a href="#">blues</a>
+            <a href="#">instrumental</a>
+            <a href="#">hip-hop</a>
+            <a href="#">pop</a>
+        </div>
+        <div class="music-images">
+            <h1>Our Favourites</h1>
+            <div class="music-types">
+                <a href="#" class="type-img">
+                    <img src="images/img-1.jpg" alt="">
+                </a>
+                <a href="#" class="type-img">
+                    <img src="images/img-2.jpg" alt="">
+                </a>
+                <a href="#" class="type-img">
+                    <img src="images/img-3.jpg" alt="">
+                </a>
+                <a href="#" class="type-img">
+                    <img src="images/img-4.jpg" alt="">
+                </a>
+                <a href="#" class="type-img">
+                    <img src="images/img-5.jpg" alt="">
+                </a>
+                <a href="#" class="type-img">
+                    <img src="images/img-6.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="my-list" id="my-list">
+        <ul class="selected-songs">
+            <h1>my list</h1>
+        </ul>
+        <div class="add-new-song">
+            <p>add new song to your list</p>
+            <form id="add-btn">
+                <input id="song-input" type="text" placeholder="Example : U2 - Elevation">
+                <button type="submit"><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+    </section>
+    <section class="slider-background">
+        <div id="leftArrow" class="arrow">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="listening-slider">
+            <div class="listening-song">
+                <img src="images/img-1.jpg">
+                <p class="singer">Jason Derulo</p>
+                <p class="song">Breathing</p>
+                <div class="listening-buttons">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="song-time">
+                    <div class="song-time-track"></div>
+                    <i class="fa-solid fa-circle"></i>
+                    <p>3.27</p>
+                </div>
+            </div>
+            <div class="listening-song">
+                <img src="images/img-2.jpg">
+                <p class="singer">Jason Derulo</p>
+                <p class="song">Breathing</p>
+                <div class="listening-buttons">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="song-time">
+                    <div class="song-time-track"></div>
+                    <i class="fa-solid fa-circle"></i>
+                    <p>3:27</p>
+                </div>
+            </div>
+            <div class="listening-song">
+                <img src="images/img-3.jpg">
+                <p class="singer">Jason Derulo</p>
+                <p class="song">Breathing</p>
+                <div class="listening-buttons">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="song-time">
+                    <div class="song-time-track"></div>
+                    <i class="fa-solid fa-circle"></i>
+                    <p>3.27</p>
+                </div>
+            </div>
+        </div>
+        <div id="rightArrow" class="arrow">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+    <div class="sign-up-section">
+        <h1>for the best music listening experience</h1>
+        <button class="sign-up-button" id="open-modal">
+            <p>sign up</p>
+        </button>
+    </div>  
+    <div class="modal">
+        <form>
+            <i id="close-modal" class="fa-regular fa-circle-xmark"></i>
+            <label>Name</label>
+            <input type="text" placeholder="type-here">
+            <label>Surname</label>
+            <input type="text" placeholder="type-here">
+            <label>Password</label>
+            <input type="password" placeholder="type-here">
+            <label>E-mail</label>
+            <input type="email" placeholder="type-here">
+            <button id="form-btn">sign up now</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
